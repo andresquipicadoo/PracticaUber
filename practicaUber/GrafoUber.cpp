@@ -97,7 +97,7 @@ public:
         return ruta; // Devolver la ruta más corta.
     }
 
-    // Este método se encarga de calcular la distancia del viaje
+    // Este método se encarga de calcular la distancia  del viaje y convierte esa distancia a minutos que corresponde a la duracion
     int CalcularDuracion(int distancia) {
         const int velocidad_promedio = 60; // Velocidad promedio en km/h.
         return (distancia * 60) /
