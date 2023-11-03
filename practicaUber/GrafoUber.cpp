@@ -1,10 +1,16 @@
 #include <iostream>
 #include <vector>
+//La librería <queue> se utiliza en este código para implementar una cola (queue) de
+// prioridad utilizada en el algoritmo de búsqueda de la ruta más corta
 #include <queue>
+//La librería <unordered_map> se utiliza en este codigo código para implementar una
+// estructura de datos que mapea los nombres de lugares a sus identificadores (IDs) correspondientes.
 #include <unordered_map>
+//La librería <algorithm> se utiliza en este codigo para agregar el nombre del lugar actual a la componente
 #include <algorithm>
+// La librería <limits> se utiliza en este código para obtener el valor máximo representable por un tipo de dato entero
 #include <limits>
-
+//Clase para los lugares
 class Lugar {
 public:
     std::string nombre;
@@ -160,19 +166,21 @@ int main() {
     // Solicitar el lugar de partida
     std::cout << "Uber" << std::endl;
     std::cout << "Ingrese el lugar de origen: ";
+    // Leer el punto de partida digitado por el usuario
     std::cin >> origen;
     //Seleccionar el lugar de destino
     std::cout << "Ingrese el lugar de destino: ";
+    // Leer el punto de destino digitado por el usuario
     std::cin >> destino;
 
-    // Verificar que las lugar ingresadas son válidas
+    // Este if se encarga de verificar que las lugar ingresadas son válidas
     if (mapa.ObtenerIdLugar(origen) == -1 || mapa.ObtenerIdLugar(destino) == -1) {
         std::cout << "Destino no valido." << std::endl;
         return 1;
     }
 
     int distancia_total, duracion_total;
-    // Encontrar la ruta más corta
+    // Esta linea se encarga de encortrar la ruta mas corta entre el punto A y B
     std::vector<std::string> ruta_mas_corta = mapa.EncontrarRutaMasCorta(origen, destino, distancia_total, duracion_total);
 
     if (ruta_mas_corta.empty()) {
@@ -182,17 +190,17 @@ int main() {
         for (const std::string &lugar : ruta_mas_corta) {
             std::cout << lugar << " -> ";
         }
-        //Mostrar la distancia del recorrido y la duracion en minutos
+        //Esta linea muestra un mensaje indicando la distancia del recorrido y la duracion que es en minutos
         std::cout << "Distancia: " << distancia_total << " km, Duración: " << duracion_total << " minutos" << std::endl;
         std::cout << "Viaje solicitado el socio de la APP llegara en unos minutos" << std::endl;
         // Mensaje del metodo de pago
         std::cout << "Metodo de pago: Tarjeta de debito" << std::endl;
     }
 
-    // Encontrar componentes conexas
+    //Esta linea encuentra las componentes conexas del grafo
     std::vector<std::vector<std::string>> componentes_conexas = mapa.EncontrarComponentesConexas();
 
-    // Imprimir cada una de las componentes conexas
+    // Imprime cada una de las componentes conexas
     std::cout << "Componentes Conexas:" << std::endl;
     for (const std::vector<std::string> &componente : componentes_conexas) {
         std::cout << "Componente: ";
