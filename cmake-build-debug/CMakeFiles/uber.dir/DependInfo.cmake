@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/cygdrive/c/Users/aquir/OneDrive/Desktop/GitHub/uber/practicaUber/prueba.cpp" "CMakeFiles/uber.dir/practicaUber/prueba.cpp.o" "gcc" "CMakeFiles/uber.dir/practicaUber/prueba.cpp.o.d"
+  "/cygdrive/c/Users/aquir/OneDrive/Desktop/GitHub/uber/practicaUber/GrafoUber.cpp" "CMakeFiles/uber.dir/practicaUber/GrafoUber.cpp.o" "gcc" "CMakeFiles/uber.dir/practicaUber/GrafoUber.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

@@ -1,1 +1,1 @@
-/usr/bin/g++.exe -g -Wl,--enable-auto-import CMakeFiles/uber.dir/practicaUber/prueba.cpp.o -o uber.exe -Wl,--out-implib,libuber.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+/usr/bin/g++.exe -g -Wl,--enable-auto-import CMakeFiles/uber.dir/practicaUber/GrafoUber.cpp.o -o uber.exe -Wl,--out-implib,libuber.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

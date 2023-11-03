@@ -80,7 +80,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/cygdrive/c/Users/aquir/OneDrive/Desktop/GitHub/uber/practicaUber/prueba.cpp">
+		<Unit filename="/cygdrive/c/Users/aquir/OneDrive/Desktop/GitHub/uber/practicaUber/GrafoUber.cpp">
 			<Option target="uber"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/aquir/OneDrive/Desktop/GitHub/uber/CMakeLists.txt">

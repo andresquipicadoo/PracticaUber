@@ -4,4 +4,4 @@ project(uber)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(uber
-        practicaUber/prueba.cpp)
+        practicaUber/GrafoUber.cpp)

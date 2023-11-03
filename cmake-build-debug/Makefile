@@ -129,29 +129,29 @@ uber/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/uber.dir/build.make CMakeFiles/uber.dir/build
 .PHONY : uber/fast
 
-practicaUber/prueba.o: practicaUber/prueba.cpp.o
-.PHONY : practicaUber/prueba.o
+practicaUber/GrafoUber.o: practicaUber/GrafoUber.cpp.o
+.PHONY : practicaUber/GrafoUber.o
 
 # target to build an object file
-practicaUber/prueba.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/uber.dir/build.make CMakeFiles/uber.dir/practicaUber/prueba.cpp.o
-.PHONY : practicaUber/prueba.cpp.o
+practicaUber/GrafoUber.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/uber.dir/build.make CMakeFiles/uber.dir/practicaUber/GrafoUber.cpp.o
+.PHONY : practicaUber/GrafoUber.cpp.o
 
-practicaUber/prueba.i: practicaUber/prueba.cpp.i
-.PHONY : practicaUber/prueba.i
+practicaUber/GrafoUber.i: practicaUber/GrafoUber.cpp.i
+.PHONY : practicaUber/GrafoUber.i
 
 # target to preprocess a source file
-practicaUber/prueba.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/uber.dir/build.make CMakeFiles/uber.dir/practicaUber/prueba.cpp.i
-.PHONY : practicaUber/prueba.cpp.i
+practicaUber/GrafoUber.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/uber.dir/build.make CMakeFiles/uber.dir/practicaUber/GrafoUber.cpp.i
+.PHONY : practicaUber/GrafoUber.cpp.i
 
-practicaUber/prueba.s: practicaUber/prueba.cpp.s
-.PHONY : practicaUber/prueba.s
+practicaUber/GrafoUber.s: practicaUber/GrafoUber.cpp.s
+.PHONY : practicaUber/GrafoUber.s
 
 # target to generate assembly for a file
-practicaUber/prueba.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/uber.dir/build.make CMakeFiles/uber.dir/practicaUber/prueba.cpp.s
-.PHONY : practicaUber/prueba.cpp.s
+practicaUber/GrafoUber.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/uber.dir/build.make CMakeFiles/uber.dir/practicaUber/GrafoUber.cpp.s
+.PHONY : practicaUber/GrafoUber.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... uber"
-	@echo "... practicaUber/prueba.o"
-	@echo "... practicaUber/prueba.i"
-	@echo "... practicaUber/prueba.s"
+	@echo "... practicaUber/GrafoUber.o"
+	@echo "... practicaUber/GrafoUber.i"
+	@echo "... practicaUber/GrafoUber.s"
 .PHONY : help
 
 

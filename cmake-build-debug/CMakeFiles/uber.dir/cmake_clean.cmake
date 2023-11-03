@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/uber.dir/practicaUber/prueba.cpp.o"
-  "CMakeFiles/uber.dir/practicaUber/prueba.cpp.o.d"
+  "CMakeFiles/uber.dir/practicaUber/GrafoUber.cpp.o"
+  "CMakeFiles/uber.dir/practicaUber/GrafoUber.cpp.o.d"
   "libuber.dll.a"
   "uber.exe"
   "uber.pdb"
