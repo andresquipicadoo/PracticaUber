@@ -114,7 +114,8 @@ public:
         return componentes;
     }
     // Este metodo es auxiliar para el recorrido y ademas encontrar componentes conexas.
-    //DFS toma tres argumentos: lugar_actual es el índice del lugar actual en el grafo, visitado es un vector de booleanos que se utiliza para realizar un seguimiento de los lugares visitados, y componente
+    //DFS toma tres argumentos: lugar_actual es el índice del lugar actual en el grafo, visitado es un vector de booleanos
+    // que se utiliza para realizar un seguimiento de los lugares visitados, y componente
     // es un vector que se utiliza para almacenar los nombres de los lugares en la componente conexa actual.
     void DFS(int lugar_actual, std::vector<bool> &visitado, std::vector<std::string> &componente) {
         visitado[lugar_actual] = true; // Se marca el lugar actual como visitado.
