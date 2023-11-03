@@ -42,7 +42,9 @@ public:
         return -1; // Devuelve -1 si el lugar no se encuentra.
     }
 
-    std::vector<std::string> EncontrarRutaMasCorta(const std::string &origen, const std::string &destino, int &distancia_total, int &duracion_total) {
+    std::vector<std::string>
+    EncontrarRutaMasCorta(const std::string &origen, const std::string &destino, int &distancia_total,
+                          int &duracion_total) {
         int idOrigen = ObtenerIdLugar(origen); // Obtiene el ID del lugar de origen.
         int idDestino = ObtenerIdLugar(destino); // Obtiene el ID del lugar de destino.
 
@@ -59,7 +61,7 @@ public:
             int lugar_actual = pq.top().second; // Obtiene el lugar actual de la cola de prioridad.
             pq.pop();
 
-            for (const auto &relacion : relaciones[lugar_actual]) {
+            for (const auto &relacion: relaciones[lugar_actual]) {
                 int lugar_destino = relacion.first; // Obtiene el lugar de destino de la relación.
                 int distancia_actual = relacion.second; // Obtiene la distancia entre los lugares.
                 int nueva_duracion = duracion[lugar_actual] + CalcularDuracion(distancia_actual);
@@ -68,7 +70,8 @@ public:
                     distancia[lugar_destino] = distancia[lugar_actual] + distancia_actual;
                     duracion[lugar_destino] = nueva_duracion;
                     padre[lugar_destino] = lugar_actual;
-                    pq.push({-distancia[lugar_destino], lugar_destino}); // Actualiza las distancias y la cola de prioridad.
+                    pq.push({-distancia[lugar_destino],
+                             lugar_destino}); // Actualiza las distancias y la cola de prioridad.
                 }
             }
         }
@@ -91,7 +94,8 @@ public:
     // Este método se encarga de calcular la duración del viaje
     int CalcularDuracion(int distancia) {
         const int velocidad_promedio = 60; // Velocidad promedio en km/h.
-        return (distancia * 60) / velocidad_promedio; // Convierte la distancia en minutos utilizando la velocidad promedio.
+        return (distancia * 60) /
+               velocidad_promedio; // Convierte la distancia en minutos utilizando la velocidad promedio.
     }
 
     // Este metodo es el encargado encontrar componentes conexas.
@@ -109,21 +113,22 @@ public:
 
         return componentes;
     }
-
-    // Método auxiliar para el recorrido y ademas encontrar componentes conexas.
+    // Este metodo es auxiliar para el recorrido y ademas encontrar componentes conexas.
+    //DFS toma tres argumentos: lugar_actual es el índice del lugar actual en el grafo, visitado es un vector de booleanos que se utiliza para realizar un seguimiento de los lugares visitados, y componente
+    // es un vector que se utiliza para almacenar los nombres de los lugares en la componente conexa actual.
     void DFS(int lugar_actual, std::vector<bool> &visitado, std::vector<std::string> &componente) {
-        visitado[lugar_actual] = true;
-        componente.push_back(lugares[lugar_actual].nombre);
+        visitado[lugar_actual] = true; // Se marca el lugar actual como visitado.
+        componente.push_back(lugares[lugar_actual].nombre); // Se agrega el nombre del lugar actual a la componente.
 
-        for (const auto &relacion : relaciones[lugar_actual]) {
+        for (const auto &relacion: relaciones[lugar_actual]) {
             int lugar_destino = relacion.first;
             if (!visitado[lugar_destino]) {
-                DFS(lugar_destino, visitado, componente);
+                DFS(lugar_destino, visitado,
+                    componente); // Llamada recursiva a DFS para explorar los lugares adyacentes no visitados.
             }
         }
     }
 };
-
 int main() {
     Mapa mapa(17);
 
